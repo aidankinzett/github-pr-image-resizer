@@ -45,6 +45,15 @@ export const useClipboard = () => {
 
   const handleCopy = useCallback(
     async (text: string) => {
+      if (text === "") {
+        toast({
+          title: "No content to copy",
+          description: "Please paste content into the input field first",
+          variant: "destructive",
+        });
+        return;
+      }
+
       try {
         await navigator.clipboard.writeText(text);
         toast({
