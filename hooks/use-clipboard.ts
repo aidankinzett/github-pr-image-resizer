@@ -32,6 +32,12 @@ export const useClipboard = () => {
         setInput(text);
         // Reset errors when pasting new content
         setErrors([]);
+      } else {
+        toast({
+          title: "No content to paste",
+          description: "Please copy the original markdown content to paste",
+          variant: "destructive",
+        });
       }
     } catch (err) {
       console.error("Failed to paste:", err);
