@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { useImageConverter } from "@/hooks/use-image-converter";
@@ -28,8 +26,8 @@ const ImageConverter = () => {
           <p className="text-md text-gray-500">
             First drag and drop your image into the GitHub PR comment or
             description. Then after waiting for it to upload, copy the resulting
-            markdown into the textarea below. Then you can paste the output back
-            into the PR comment or description.
+            markdown into the textarea below. Then you can copy and paste the
+            output back into the PR comment or description.
           </p>
         </div>
 
